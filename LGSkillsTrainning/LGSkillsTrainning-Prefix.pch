@@ -1,0 +1,28 @@
+//
+// Prefix header for all source files of the 'LGSkillsTrainning' target in the 'LGSkillsTrainning' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+#define GVRelease(obj) {{[obj release]; obj = nil; }}
+
+#define GVViewRelease(obj) {[obj removeFromSuperview];[obj release];obj = nil;}
+#define GVVCtrlRelease(obj) { [obj.view removeFromSuperview];[obj removeFromParentViewController];[obj release];obj=nil;}
+
+#define NAVIGATIONBARHEIGHT 40
+
+#ifdef DEBUG
+#define GVLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define GVLog(...)
+#define debugMethod()
+#endif
