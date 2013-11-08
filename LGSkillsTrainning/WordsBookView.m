@@ -84,7 +84,7 @@
         lblwordname.font=[UIFont boldSystemFontOfSize:18];
         [cell.contentView addSubview:lblwordname];
         [lblwordname release];
-        
+            
         UILabel *lblwordSoundmark=[[UILabel alloc] initWithFrame:CGRectMake(10, 32, 200, 30)];
         lblwordSoundmark.backgroundColor=[UIColor clearColor];
         lblwordSoundmark.text=[NSString stringWithFormat:@"音标：%@",awordinfo.wordSoundmark ];
